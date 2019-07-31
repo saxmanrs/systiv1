@@ -1,0 +1,45 @@
+{% extends 'base.html'%}
+
+{% block title %} Lista de Produtos {% endblock %}
+
+{% block main %}
+
+    <div class="row">
+        <div class="col">
+
+        </div>
+
+        <div class="col-6">
+            <h3>Lista de Produtos</h3>
+            <ul class="list-group">
+                {% for produto in products %}
+                <li class="list-group-item">
+                    <a href="{% url 'produto_upd' produto.id %}"> {{ produto.nome }} </a>
+                    <a href="{% url 'produto_del' produto.id %}" class="trash-item">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+            <br>
+            <a href="{% url 'produto_new' %}" class="btn btn-primary">Novo Produto</a>
+        </div>
+
+        <div class="col">
+            {% if user.is_authenticated %}
+                <p>Olá {{ user.username }}
+                    <a href="{% url 'logout' %}" class="badge badge-dark">Sair</a>
+                </p>
+            {% endif %}
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <footer class="footer mt-auto py-3">
+      <div class="container">
+        <span class="text-muted">Péricles Zacarias Abrahão - Django.</span>
+      </div>
+    </footer>
+{% endblock %}
