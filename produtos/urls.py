@@ -11,5 +11,3 @@ urlpatterns = [
     path('upd/<int:id>', produto_upd, name="produto_upd"),
     path('del/<int:id>', produto_del, name="produto_del"),
 ]
-
-

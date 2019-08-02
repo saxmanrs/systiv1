@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'produtos',
     'home',
     'usuarios',
+    'index',
 ]
 
 MIDDLEWARE = [
@@ -143,7 +144,7 @@ MEDIA_URL = "/media/"
 MEDIA_ROOT = "media"
 
 LOGIN_URL = '/login/'
-LOGIN_REDIRECT_URL = 'produto_list'
+LOGIN_REDIRECT_URL = 'index_urls'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 

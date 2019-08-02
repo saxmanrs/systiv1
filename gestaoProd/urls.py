@@ -18,6 +18,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from produtos import urls as produtos_urls
+from usuarios import urls as usuarios_urls
+from index import urls as index_urls
 from home import urls as home_urls
 from django.conf import settings
 from django.conf.urls.static import static
@@ -26,6 +28,8 @@ from django.contrib.auth import views as auth_views
 urlpatterns = [
   path('', include(home_urls)),
   path('produtos/', include(produtos_urls)),
+  path('usuarios/', include(usuarios_urls)),
   path('login/', auth_views.LoginView.as_view(), name="login"),
+  path('index/',include(index_urls)),
   path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
