@@ -12,7 +12,7 @@
                 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
                 <link rel="stylesheet" href="{% static 'stick-footer.css' %}">
                 <link rel="stylesheet" href="{% static 'styles.css' %}">
-                <title>{% block title %}SYSTI{% endblock %}</title>
+                <title>{% block title %}Cadastro Funcionários -SYSTI{% endblock %}</title>
             </head>
             {% block main %}
             <body class='main page'>
@@ -35,17 +35,29 @@
                       <section id='sidebar'>
                         <i class='icon-align-justify icon-large' id='toggle'></i>
                         <ul id='dock'>
-                          <li class='active launcher'>
                             <i class='icon-dashboard'></i>
                             <a href="{% url 'index_urls' %}">Dashboard</a>
                           </li>
                           <li class='launcher'>
+                            <li class='active launcher'>
                             <i class='icon-file-text-alt'></i>
                             <a href="{% url 'cad_urls' %}">Cadastro</a>
                           </li>
-                          <li class='launcher'>
+                          <li class='launcher dropdown hover'>
                             <i class='icon-flag'></i>
                             <a href='#'>Relatórios</a>
+                            <ul class='dropdown-menu'>
+                              <li class='dropdown-header'>Launcher description</li>
+                              <li>
+                                <a href='#'>Action</a>
+                              </li>
+                              <li>
+                                <a href='#'>Another action</a>
+                              </li>
+                              <li>
+                                <a href='#'>Something else here</a>
+                              </li>
+                            </ul>
                           </li>
                           <li class='launcher'>
                             <i class='icon-bookmark'></i>
@@ -60,7 +72,7 @@
                             <a href='#'>Sobre</a>
                           </li>
                         </ul>
-                        
+                        <div data-toggle='tooltip' id='beaker' title='Made by lab2023'></div>
                       </section>
                       <!-- Tools -->
                       <section id='tools'>

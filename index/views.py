@@ -13,8 +13,13 @@ def index_urls(request):
     return render(request, 'index.html')
 
 
-
 def my_logout(request):
     logout(request)
     return redirect('home')
+
+
+
+@login_required
+def cad_urls(request):
+    return render (request,'cadastro.html')
 
