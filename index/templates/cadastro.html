@@ -108,12 +108,12 @@
                         <div class='panel panel-default'>
                           <div class='panel-heading'>
                             <i class='glyphicon glyphicon-th-list'></i>
-                            SysTI
+                            Cadastros
                             <div class='panel-tools'>
                               <div class='btn-group'>
-                                <a class='btn' href='#'>
+                                <a class='btn' href="{% url 'cad_urls' %}">
                                   <i class='icon-refresh'></i>
-                                  Atualizar estatisticas
+                                  Funcionários | Ativos | Senhas | Projetos Ambientais
                                 </a>
                                 <a class='btn' data-toggle='toolbar-tooltip' href='#' title='Toggle'>
                                   <i class='icon-chevron-down'></i>
@@ -121,9 +121,29 @@
                               </div>
                             </div>
                           </div>
+                          <div class="panel-body">
+                            <div class='page-header'>
+                              <h4>Cadastros</h4>
+                            </div>
+                              <div class="row">
+                                <div class="col-md-3">
+                                  <a href="{% url 'usuarios_new' %}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Funcionários</a>
+                                </div>
+                                <div class="col-md-3">
+                                  <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Ativos</a>
+                                </div>
+                                <div class="col-md-3">
+                                  <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Senhas</a>
+                                </div>
+                                <div class="col-md-3">
+                                  <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Projetos</a>
+                                </div>
+                              </div>
+
+                          </div>
                           <div class='panel-body'>
                             <div class='page-header'>
-                              <h4>System usage</h4>
+                              <h4>Uso do Sistema</h4>
                             </div>
                             <div class='progress'>
                               <div class='progress-bar progress-bar-success' style='width: 35%'></div>
@@ -131,7 +151,7 @@
                               <div class='progress-bar progress-bar-danger' style='width: 10%'></div>
                             </div>
                             <div class='page-header'>
-                              <h4>User statics</h4>
+                              <h4>Estatisticas</h4>
                             </div>
                             <div class='row text-center'>
                               <div class='col-md-3'>
@@ -146,6 +166,7 @@
                               <div class='col-md-3'>
                                 <input class='knob second' data-bgcolor='#f8d2e0' data-fgcolor='#b85e80' data-height='140' data-inputcolor='#333' data-thickness='.3' data-width='140' type='text' value='85'>
                               </div>
+                              
                             </div>
                           </div>
                         </div>

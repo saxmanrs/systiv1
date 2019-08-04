@@ -7,6 +7,4 @@ urlpatterns = [
 path('index/', index_urls, name="index_urls"),
 path('logout/', my_logout, name="logout"),
 path('cadastro/', cad_urls, name="cad_urls"),
-
-
 ]

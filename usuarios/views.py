@@ -37,10 +37,10 @@ def usuarios_upd(request, id):
 @login_required
 def usuarios_del(request, id):
     usuarios = get_object_or_404(Usuarios, pk=id)
-    form = UsuariosForm(request.POST or None, request.FILES or None)
+    form = UsuariosForm(request.POST or None, request.FILES or None, instance=usuarios)
 
-    if form.is_valid():
-        form.save()
+    if request.method=='POST':
+        usuarios.delete()    
         return redirect('usuarios_list')
     return render (request, 'usuarios_del_conf.html',{'form': form})
 
