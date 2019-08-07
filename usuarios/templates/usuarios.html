@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-{% extends 'base.html' %}
 {% load static %}
 {% load bootstrap %}
-
-=======
-{% load static %}
-{% load bootstrap %}
-
 <!doctype html>
 <html lang="en">
         <head>
@@ -20,8 +13,9 @@
                 <link rel="stylesheet" href="{% static 'styles.css' %}">
                 <title>{% block title %}Cadastro Funcionários -SYSTI{% endblock %}</title>
             </head>
->>>>>>> 3127fcd747c97f6ea997f77bc2e16440c787b69f
             {% block main %}
+
+           
             <body class='main page'>
                     <!-- Navbar -->
                     <div class='navbar navbar-default' id='navbar'>
@@ -155,8 +149,8 @@
                                                     <td>{{ usuario.nome}}</td>
                                                     <td>{{ usuario.nome_usuario }}</td>
                                                     <td>{{ usuario.email }}</td>
-                                                    <td><a href="{% url 'usuarios_upd' usuario.id %}"  class="list-group-item"> <i class="glyphicon glyphicon-pencil"></i> </a></td>
-                                                    <td><a href="{% url 'usuarios_del' usuario.id %}" class="list-group-item">
+                                                    <td><a href="{% url 'usuarios_upd' usuario.id %}"  > <i class="glyphicon glyphicon-pencil"></i> </a></td>
+                                                    <td><a href="{% url 'usuarios_del' usuario.id %}"  data-id="23">
                                                             <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
                                                         </a></td>
                                                     {% endfor %}
@@ -167,8 +161,21 @@
                             </div>
                            
                         </div>
-
-                                   
+                        <div id="modal-from-dom" class="modal hide fade">
+                          <div class="modal-header">
+                              <a href="#" class="close">&times;</a>
+                               <h3></h3>
+                          </div>
+                          <div class="modal-body">
+                              <p>Confirma Exclusão do Funcionário: {{ usuario.nome }}</p>
+                               <p id="debug-url"></p>
+                          </div>
+                          <div class="modal-footer">
+                              <a href="delete.php?ref=" class="btn danger">Yes</a>
+                              <!-- <a href="delete.php?some=param&ref=" class="btn danger">Yes 2</a> -->
+                              <a href="#" data-dismiss="modal" class="btn secondary">No</a>
+                          </div>
+                      </div>            
                                        
                                         
                                    

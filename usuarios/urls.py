@@ -1,14 +1,14 @@
 from django.urls import path
-from .views import usuarios_list
-from .views import usuarios_new
-from .views import usuarios_upd
-from .views import usuarios_del
+from .views import ativos_list
+from .views import ativos_new
+from .views import ativos_upd
+from .views import ativos_del
 
 
 
 urlpatterns = [
-path('list/', usuarios_list, name="usuarios_list"),
-path('new/', usuarios_new, name="usuarios_new"),
-path('upd/<int:id>', usuarios_upd, name="usuarios_upd"),
-path('del/<int:id>', usuarios_del, name="usuarios_del"),
+path('list/', ativos_list, name="ativos_list"),
+path('new/', ativos_new, name="ativos_new"),
+path('upd/<int:id>', ativos_upd, name="ativos_upd"),
+path('del/<int:id>', ativos_del, name="ativos_del"),
 ]

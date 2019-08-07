@@ -27,6 +27,6 @@ class Ativos(models.Model):
     marca_ativo = models.CharField('Marca Ativo', max_length=30)
     setor_ativo = models.OneToOneField(Setor, null=True,blank=True, on_delete=models.CASCADE)
     status_ativo = models.OneToOneField(StatusAtivo,null=True,blank=True, on_delete=models.CASCADE)
-
+    data_cadastro = models.DateField('Data Cadastro')
     def __str__ (self):
         return self.sigla_ativo

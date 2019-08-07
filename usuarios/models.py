@@ -1,5 +1,4 @@
 from django.db import models
-from .models import Ativos
 
 
 
@@ -11,8 +10,7 @@ class Usuarios (models.Model):
     data_fim = models.DateField('Data Final')
     setor = models.CharField('Setor', max_length=20)
     ramal = models.IntegerField('Ramal')
-    ativo =models.ForeignKey(Ativos,on_delete=models.CASCADE)
-
+    
     def __str__(self):
         return self.nome
 
